@@ -3,105 +3,24 @@ layout: workshop      # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "FIXME"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
-latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["instructor one", "instructor two"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["helper one", "helper two"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["first@example.org","second@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
+venue: "University of Arizona"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
+address: "online"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
+latitude: "0"        # decimal latitude of workshop venue (use https://www.latlong.net/)
+longitude: "0"       # decimal longitude of the workshop venue (use https://www.latlong.net)
+humandate: "June 5, 2023"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "1:00 pm - 4:30 pm"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+startdate: 20230605      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 20230606        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Uwe Hilgert"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["KEYS Crew", "KEYS Staff"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["hilgert@bio5.org", "keys@bio5.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+collaborative_notes:  http://pad.software-carpentry.org/KEYS2023-ShellTraining # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
-{% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
-
-{% comment %}
-HEADER
-
-Edit the values in the block above to be appropriate for your workshop.
-If the value is not 'true', 'false', 'null', or a number, please use
-double quotation marks around the value, unless specified otherwise.
-And run 'make workshop-check' *before* committing to make sure that changes are good.
-{% endcomment %}
-
-
-{% comment %}
-8< ============= For a workshop delete from here =============
-For a workshop please delete the following block until the next dashed-line
-{% endcomment %}
-
-
-<div class="alert alert-danger">
-This is the workshop template. Delete these lines and use it to
-<a href="https://carpentries.github.io/workshop-template/customization/index.html">customize</a>
-your own website. If you are running a self-organized workshop or have not put
-in a workshop request yet, please also fill in
-<a href="{{site.amy_site}}/forms/self-organised/">this workshop request form</a>
-to let us know about your workshop and our administrator may contact you if we
-need any extra information.
-If this is a pilot workshop for a new lesson,
-set the `pilot` field to `true` in `_config.yml`.
-For workshops teaching a lesson in The Carpentries Incubator,
-remember to uncomment the `incubator_lesson_site`, `incubator_pre_survey`, and `incubator_post_survey`
-fields in `_config.yml`
-</div>
-
-{% comment %}
-8< ============================= until here ==================
-{% endcomment %}
-
-
-{% comment %}
-Check DC curriculum
-{% endcomment %}
-
-{% if site.carpentry == "dc" %}
-{% unless site.curriculum == "dc-astronomy" or site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-geospatial" or site.curriculum == "dc-image" or site.curriculum == "dc-socsci" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>dc-image</code>, <code>dc-astronomy</code>, <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-Check SWC curriculum
-{% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% unless site.curriculum == "swc-inflammation" or site.curriculum == "swc-gapminder" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Software Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>swc-inflammation</code>, or <code>swc-gapminder</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-EVENTBRITE
-
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
-{% endcomment %}
-{% if page.eventbrite %}
-<strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
+<h2 id="general">INTRODUCTION TO SCIENCE COMPUTATION</h2>
 
 <h2 id="general">General Information</h2>
 
@@ -117,10 +36,6 @@ the pitch.
 {% include dc/intro.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/intro.html %}
-{% endif %}
-
-{% if site.pilot %}
-This is a pilot workshop, testing out a lesson that is still under development. The lesson authors would appreciate any feedback you can give them about the lesson content and suggestions for how it could be further improved.
 {% endif %}
 
 {% comment %}
@@ -171,8 +86,7 @@ address.
 </p>
 {% elsif online == "true_private" %}
 <p id="where">
-  <strong>Where:</strong> This training will take place online.
-  The instructors will provide you with the information you will need to connect to this meeting.
+  <strong>Where:</strong> This training will take place in person as well as online. The organizers will provide you with the information you will need to connect to this meeting.
 </p>
 {% endif %}
 
@@ -223,9 +137,7 @@ special instructions.
   <li>Accessible restrooms are available.</li>
 </ul>
 <p>
-  Materials will be provided in advance of the workshop and
-  large-print handouts are available if needed by notifying the
-  organizers in advance.  If we can help making learning easier for
+  Material will be provided in advance of the workshop.  If we can help making learning easier for
   you (e.g. sign-language interpreters, lactation facilities) please
   get in touch (using contact details below) and we will
   attempt to provide them.
@@ -268,6 +180,7 @@ Display the contact email address set in the configuration file.
   refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
 </p>
 
+<!--
 {% comment %}
 WHO CAN ATTEND?
 
@@ -289,6 +202,7 @@ Edit the text to match who can attend the workshop. For instance:
 </p>
 {% endcomment %}
 
+-->
 <hr/>
 
 {% comment%}
@@ -330,7 +244,11 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 <hr/>
 {% endif %}
 
+<p>
+  This Google Doc at <a href="https://docs.google.com/document/d/1A2lRqSD169z466qz53Dw4CtCZUXe40gZzZs2tGukyPA/edit?usp=sharing">https://docs.google.com/document/d/1A2lRqSD169z466qz53Dw4CtCZUXe40gZzZs2tGukyPA/edit?usp=sharing</a> holds additional IMPORTANT information on the workshop and how to prepare for it. 
+<p>
 
+<!--
 {% comment %}
 SURVEYS - DO NOT EDIT SURVEY LINKS
 {% endcomment %}
@@ -352,7 +270,8 @@ change the value of `carpentry` to `incubator`.
 <p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% endif %}
-
+-->
+  
 <hr/>
 
 
@@ -378,6 +297,7 @@ of code below the Schedule `<h2>` header below with
 `{% include custom-schedule.html %}`.
 {% endcomment %}
 
+<!--
 <h2 id="schedule">Schedule</h2>
 
 {% if site.carpentry == "swc" %}
@@ -400,8 +320,58 @@ how one of these schedule tables is constructed.
 {% if site.pilot %}
 The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. Please [contact the workshop organisers](#contact) if you would like more information about the planned schedule.
 {% endif %}
+-->
 
 <hr/>
+
+<h3 id="syllabus"><u>Syllabus</u></h3>
+
+<div class="row">
+  <div class="col-md-6">
+    <h3 id="syllabus-shell">The Command Shell</h3>
+    The command shell (a.k.a. UNIX Shell, Bash Shell, Shell) is a power tool that allows computer users to do complex things with just a few keystrokes. Contrary to graphical user interfaces (GUI) it allows users to direct the computer from a more foundational level, using written commands. Even what happens when you click on items in GUIs is directed by written commands. Working in the 'Shell' helps users combine existing programs in new ways and automate repetitive tasks so they aren’t typing the same things over and over again. Shell proficiency is fundamental to using a wide range of other powerful tools and computing resources, including “high-performance computing” supercomputers.<br>
+    <br>
+    Using the Bash Shell the workshop will introduce these concepts and procedures:<br>
+    <br>
+    <ul>
+      <li>Files and Directories</li>
+      <li>History and Tab Completion</li>
+      <li>Pipes and Redirection</li>
+      <li>Looping Over Files</li>
+      <li>Creating and Running Shell Scripts</li>
+    </ul> 
+    <u>Additional Resources:</u>
+      <ul>
+		  <li><a href="{{site.swc_pages}}/shell-novice/reference">Shell Quick Reference</a></li>
+		  <li><a href="{{site.swc_pages}}/shell-novice">Shell Lessons</a></li>
+      <li><a href="http://explainshell.com/" target="_blank"><em>Explain Shell</em> (Parses shell commands and shows docs about the command)</a></li>
+		  <li><a href="http://www.shellcheck.net/" target="_blank"><em>ShellCheck</em> (Identifies bugs in shell scripts)</a></li>
+		  <li><a href="http://man.he.net/" target="_blank"><em>Linux Man Pages Online</em> (Same content as command line man/help pages)</a></li>
+	  </ul>
+  </div>
+  <div class="col-md-6">
+    <h3 id="syllabus-git">Version Control with Git</h3>
+    Version control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or might need to be shared can and should be stored in a version control system.<br>
+    <br>
+  Using git (on your local computer) and GitHub (in the cloud), the workshop will introduce these version control concepts and procedures:<br>
+    <br>
+    <ul>
+      <li>Creating and initializing a Repository: <code>init</code></li>
+      <li>Recording Changes to Files: <code>add</code>, <code>commit</code>, ...</li>
+      <li>Viewing Changes: <code>status</code>, ...</li>
+      <li>Working on the Web: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
+    </ul>
+    <u>Additional Resources:</u>
+	  <ul>
+		  <li><a href="{{site.swc_pages}}/git-novice/reference">Git Quick Reference</a></li>
+		  <li><a href="{{site.swc_pages}}/git-novice">Git Lessons</a></li>
+      <li><a href="https://git-scm.com/book/en/v2/Git-in-Other-Environments-Git-in-Bash" target="_blank"><i>Mac/Linux:</i> Integrating Git into your shell prompt</a></li>
+		  <li><a href="https://github.com/magicmonty/bash-git-prompt" target="_blank">An informative and fancy bash prompt for Git users</a></li>
+		  <li><a href="https://education.github.com/pack" target="_blank">Unlimited <em>private</em> repositories for free on Github, <i>while you are a student</i></a></li>
+		  <li><a href="https://git-annex.branchable.com/" target="_blank">Git for Archiving Data</a></li>
+	  </ul>
+  </div>
+</div>
 
 
 {% comment %}
@@ -417,39 +387,22 @@ please preview your site before committing, and make sure to run
 {% endcomment %}
 
 <h2 id="setup">Setup</h2>
+<p>
+  To participate in the workshop, you will need to have the software listed below on your computer; please install it following the instructions provided for your computer's operating system (Windows, Mac, Unix). If you already have some of it, please uninstall it and then install the versions below - this is the only way to ensure that you will be using the same software as your instructors and fellow KEYS interns. This includes installing UA VPN, regardless of whether you already have another type of vpn software or not.</p>
+<p>If, for the duration of the KEYS internship, you have been provided with a laptop by the KEYS program, the necessary software will have been installed on your laptop prior to to the internship; you will not have to install any software for KEYS Training Week. However, please contact your KEYS Crew member if your laboratory requires you to use any software that's not on the laptop so that we can help you install it.</p>
 
 <p>
-  To participate in a
-  {% if site.carpentry == "swc" %}
-  Software Carpentry
-  {% elsif site.carpentry == "dc" %}
-  Data Carpentry
-  {% elsif site.carpentry == "lc" %}
-  Library Carpentry
-  {% endif %}
-  workshop,
-  you will need access to software as described below.
-  In addition, you will need an up-to-date web browser.
+  In addition, you will need an up-to-date web browser. We recommend Firefox and/or Safari. Chrome may work, too; if you only have Chrome, install Firefox and/or Safari as well. MS Edge or Internet Explorer will not suffice.
 </p>
+
 <p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
+You can find a list of common issues that may occur during installation at
   <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 
-{% comment %}
-For online workshops, the section below provides:
-- installation instructions for the Zoom client
-- recommendations for setting up Learners' workspace so they can follow along
-  the instructions and the videoconferencing
-
-If you do not use Zoom for your online workshop, edit the file
-`_includes/install_instructions/videoconferencing.html`
-to include the relevant installation instructions.
-{% endcomment %}
-{% if online != "false" %}
-{% include install_instructions/videoconferencing.html %}
-{% endif %}
+<p>
+  We will try to address any remaining issues in the online practice meetings prior to the start of KEYS 2022 – so, if you experience unsurmountable hurdles, take good notes about what you did and what went wrong. (Screenshots would be helpful for trouble-shooting!) You can also send an email to hilgert@bio5.org with any computational issues you may encounter and we'll try to get you help as quickly as possible.
+</p>
 
 {% comment %}
 These are the installation instructions for the tools used
@@ -467,3 +420,24 @@ Please check the "Setup" page of
 [the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
 to obtain the software and data you will need to follow the lesson.
 {% endif %}
+
+<h3 id="vpn">Very Private Network (VPN)</h3>
+
+<p>
+The UA Virtual Private Network (VPN) provides a secure connection from your home computer, laptop, or mobile device to the UA's network. It is also a valuable security tool when you are on an unsecured wireless network (e.g., coffee shops, airports).
+</p>
+
+
+<h4>Install UA VPN on your computer</h4>
+
+<p>
+  <ul>
+    <li>Go to the University of Arizona’s Information Technology (UITS) site at <a href="https://it.arizona.edu/">https://it.arizona.edu/</a>.</li>
+    <li>Click on the ‘UA Virtual Private Network (VPN)’ Tile.</li>
+    <li>Click on the ‘Support, How-To’s & Info’ tab.</li>
+    <li>In the ‘Installation’ section select the ‘UA VPN Download and Installation Instructions’ for your Operating System.</li>
+    <li>Follow the instructions to install VPN on your computer.</li>
+    <li>In the ‘Prerequisite and Training Links’ section, open ‘Connecting the UA VPN Basics for Mac and PC’ and watch the video applicable to your operating system. Then, follow the instructions to connect your machine to the UA VPN.</li>
+  </ul>
+Again, we will try to address any issues in the practice meetings prior to the start of the KEYS program – so, if you experience unsurmountable hurdles, take good notes about what you did and what went wrong. (Screenshots would be helpful for trouble-shooting!) You can also send an email to hilgert@bio5.org with any comutational issues you may encounter and we'll try to get you help as quickly as possible.
+</p>
