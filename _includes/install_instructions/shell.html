@@ -1,8 +1,7 @@
 <div id="shell">
   <h3>The Bash Shell</h3>
   <p>
-    Bash is a commonly-used shell that gives you the power to do
-    tasks more quickly.
+    Bash is a commonly-used command shell (command interface) that gives you the power to do tasks more flexibly/quickly on your computer (as opposed to the graphical user interface/GUI, where you invoke pre-programmed commands by clicking.). The implementation you will be installing and using here is called 'Git Bash' and will provide you with the Bash command shell and the version control software git in one package.
   </p>
 
   <div>
@@ -16,7 +15,7 @@
       <article role="tabpanel" class="tab-pane active" id="shell-windows">
         <ol>
           <li>Download the Git for Windows <a href="https://gitforwindows.org/">installer</a>.</li>
-          <li>Run the installer and follow the steps below:
+          <li>Run the installer by double-clicking it, then follow the steps below:
             <ol>
               {% comment %} Git 2.29.1 Setup {% endcomment %}
               <li>
@@ -25,14 +24,13 @@
                 in the Information, location, components, and start menu screens.
               </li>
               <li>
-                <strong>
                   From the dropdown menu, "Choosing the default editor used by Git", select "Use the Nano editor by default" (NOTE: you will need to scroll <emph>up</emph> to find it) and click on "Next".
-                </strong>
               </li>
               {% comment %} Adjusting the name of the initial branch in new repositories {% endcomment %}
               <li>
                 On the page that says "Adjusting the name of the initial branch in new repositories", ensure that
-		"Let Git decide" is selected. This will ensure the highest level of compatibility for our lessons.
+		"Let Git decide" is selected and
+                click on "Next". This will ensure the highest level of compatibility for our lessons.
 		{% comment %}
 		This section also has "Override the default branch name for new repositories" and has a text box set
 		to "main". I'm not having people switch to this just yet because our git lesson still uses the old paradigm.
@@ -40,47 +38,46 @@
               </li>
               {% comment %} Adjusting your PATH environment {% endcomment %}
               <li>
-                Ensure that "Git from the command line and also from 3rd-party software" is selected and
+                On the page that says "Adjusting your PATH environment", ensure that "Git from the command line and also from 3rd-party software" is selected and
                 click on "Next". (If you don't do this Git Bash will not work properly, requiring you to
                 remove the Git Bash installation, re-run the installer and to select the "Git from the
                 command line and also from 3rd-party software" option.)
               </li>
               {% comment %} Choosing the SSH executable {% endcomment %}
  	      <li>
-	      Select "Use bundled OpenSSH".
+	      On the page that says "Choosing the SSH executable", ensure that  "Use bundled OpenSSH" is selected and
+                click on "Next".
 	      </li>
               {% comment %} Choosing HTTPS transport backend {% endcomment %}
               <li>
-		Ensure that "Use the native Windows Secure Channel Library" is selected and click on "Next".
+		On the page that says "Choosing HTTPS transport backend", ensure that "Use the native Windows Secure Channel Library" is selected and click on "Next".
 	      </li>
               {% comment %} This should mean that people stuck behind corporate firewalls that do MITM attacks
                                  with their own root CA are still able to access remote git repos. {% endcomment %}
               {% comment %} Configuring the line ending conversions {% endcomment %}
               <li>
-                Ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".
+                On the page that says "Configuring the line ending conversions", ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".
               </li>
               {% comment %} Configuring the terminal emulator to use with Git Bash {% endcomment %}
               <li>
-                <strong>
-                  Ensure that "Use Windows' default console window" is selected and click on "Next".
-                </strong>
+                  On the page that says "Configuring the terminal emulator to use with Git Bash", ensure that "Use Windows' default console window" is selected and click on "Next".
               </li>
               {% comment %} Configuring extra options {% endcomment %}
               <li>
-		Ensure that "Default (fast-forward or merge) is selected and click "Next"
+		On the page that says "Choose the default behavior of 'git pull'", ensure that "Default (fast-forward or merge) is selected and click on "Next"
               </li>
               <li>
-		Ensure that "Git Credential Manager" is selected and click on "Next".
+		On the page that says "Choose a credential helper", ensure that "Git Credential Manager" is selected and click on "Next".
               </li>
               <li>
-		Ensure that "Enable file system caching" is selected and click on "Next".
+		On the page that says "Configuring extra options", ensure that "Enable file system caching" is selected and click on "Next".
               </li>
               {% comment %} Configuring experimental options {% endcomment %}
-              <li>Click on "Install".</li>
+              <li>On the page that says "Configuring experimental options", click on "Install".</li>
               {% comment %} Installing {% endcomment %}
               {% comment %} Completing the Git Setup Wizard {% endcomment %}
               {% comment %} as of 2020-06-02, the Window will say "click Finish", but the button is labelled as "Next" {% endcomment %}
-              <li>Click on "Finish" or "Next".</li>
+              On the page that says "Completing the Git Setup Wizard", uncheck the "View Release Notes" option and click on "Finish" (or "Next", if that's what the button says).</li>
             </ol>
           </li>
           <li>
@@ -96,8 +93,9 @@
             </ol>
 	  </li>
         </ol>
-        <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+        <p>This will provide you with both Git and Bash in the Git Bash program you just installed.</p>
         <h4>Video Tutorial</h4>
+	  (The tutorial could be a little outdated, so take with a grain of salt; however, it includes a nice test section for whether your installation was successful at 2:10 min for bash and at 4:00 min for the nano editor.)
         <div class="yt-wrapper2">
         <div class="yt-wrapper">
         <iframe type="text/html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/339AEqk9c-8?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0" class="yt-frame" allowfullscreen></iframe>
