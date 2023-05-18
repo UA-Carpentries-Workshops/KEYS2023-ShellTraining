@@ -243,11 +243,11 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 </p>
 <hr/>
 {% endif %}
-
+<h2>Background, Data, Presentations</h2>
 <p>
   This Google Doc at <a href="https://docs.google.com/document/d/19FDQfnv_4wSCwAluwpgoof_pyeLpO2-f/edit?usp=share_link&ouid=102078727083642285399&rtpof=true&sd=true">https://docs.google.com/document/d/19FDQfnv_4wSCwAluwpgoof_pyeLpO2-f/edit?usp=share_link&ouid=102078727083642285399&rtpof=true&sd=true</a> holds additional IMPORTANT information on the workshop and how to prepare for it. 
 <p>
-
+<hr>
 <!--
 {% comment %}
 SURVEYS - DO NOT EDIT SURVEY LINKS
