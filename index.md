@@ -245,7 +245,7 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 {% endif %}
 <h2>Background, Data, Presentations</h2>
 <p>
-  This Google Doc at <a href="https://docs.google.com/document/d/19FDQfnv_4wSCwAluwpgoof_pyeLpO2-f/edit?usp=share_link&ouid=102078727083642285399&rtpof=true&sd=true">https://docs.google.com/document/d/19FDQfnv_4wSCwAluwpgoof_pyeLpO2-f/edit?usp=share_link&ouid=102078727083642285399&rtpof=true&sd=true</a> holds additional IMPORTANT information on the workshop and how to prepare for it. 
+  This Google Doc at <a href="https://docs.google.com/document/d/1pr5L3455F2HLktgb1z44yq_B6x1e4CQatsN9Hy0_HKE/edit?usp=share_link">https://docs.google.com/document/d/1pr5L3455F2HLktgb1z44yq_B6x1e4CQatsN9Hy0_HKE/edit?usp=share_link</a> holds additional IMPORTANT information and material needed for the workshop.
 <p>
 <hr>
 <!--
